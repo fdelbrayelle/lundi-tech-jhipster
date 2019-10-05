@@ -1,0 +1,19 @@
+{
+    "name": "Organism",
+    "fields": [
+        {
+            "fieldName": "organismName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190514104522",
+    "entityTableName": "organism",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

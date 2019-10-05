@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="studyVersion">
+            <h2><span jhiTranslate="jhipsterdemoApp.studyVersion.detail.title">Study Version</span> {{studyVersion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterdemoApp.studyVersion.name">Name</span></dt>
+                <dd>
+                    <span>{{studyVersion.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterdemoApp.studyVersion.creationDate">Creation Date</span></dt>
+                <dd>
+                    <span>{{studyVersion.creationDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterdemoApp.studyVersion.updateDate">Update Date</span></dt>
+                <dd>
+                    <span>{{studyVersion.updateDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterdemoApp.studyVersion.study">Study</span></dt>
+                <dd>
+                    <div *ngIf="studyVersion.study">
+                        <a [routerLink]="['/study', studyVersion.study?.id, 'view']">{{studyVersion.study?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/study-version', studyVersion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

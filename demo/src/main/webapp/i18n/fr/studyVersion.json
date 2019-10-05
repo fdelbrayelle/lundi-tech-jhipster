@@ -1,0 +1,24 @@
+{
+  "jhipsterdemoApp": {
+    "studyVersion": {
+      "home": {
+        "title": "StudyVersions",
+        "createLabel": "Créer un nouveau Study Version",
+        "createOrEditLabel": "Créer ou éditer un Study Version"
+      },
+      "created": "Un nouveau Study Version a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Study Version avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Study Version avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Study Version {{ id }} ?"
+      },
+      "detail": {
+        "title": "Study Version"
+      },
+      "name": "Name",
+      "creationDate": "Creation Date",
+      "updateDate": "Update Date",
+      "study": "Study"
+    }
+  }
+}

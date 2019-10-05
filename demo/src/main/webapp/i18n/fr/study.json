@@ -1,0 +1,25 @@
+{
+  "jhipsterdemoApp": {
+    "study": {
+      "home": {
+        "title": "Studies",
+        "createLabel": "Créer un nouveau Study",
+        "createOrEditLabel": "Créer ou éditer un Study"
+      },
+      "created": "Un nouveau Study a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Study avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Study avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Study {{ id }} ?"
+      },
+      "detail": {
+        "title": "Study"
+      },
+      "nid": "Nid",
+      "studyType": "Study Type",
+      "country": "Country",
+      "organism": "Organism",
+      "versions": "Versions"
+    }
+  }
+}

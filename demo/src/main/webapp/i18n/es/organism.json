@@ -1,0 +1,21 @@
+{
+  "jhipsterdemoApp": {
+    "organism": {
+      "home": {
+        "title": "Organisms",
+        "createLabel": "Crear nuevo Organism",
+        "createOrEditLabel": "Crear o editar Organism"
+      },
+      "created": "Un nuevo Organism ha sido creado con el identificador {{ param }}",
+      "updated": "Un Organism ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Organism ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Organism {{ id }}?"
+      },
+      "detail": {
+        "title": "Organism"
+      },
+      "organismName": "Organism Name"
+    }
+  }
+}

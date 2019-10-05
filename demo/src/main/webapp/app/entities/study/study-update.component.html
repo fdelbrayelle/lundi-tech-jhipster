@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-study-heading" jhiTranslate="jhipsterdemoApp.study.home.createOrEditLabel">Create or edit a Study</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!study.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterdemoApp.study.nid" for="field_nid">Nid</label>
+                    <input type="text" class="form-control" name="nid" id="field_nid"
+                           formControlName="nid"/>
+                    <div *ngIf="editForm.get('nid').invalid && (editForm.get('nid').dirty || editForm.get('nid').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nid').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterdemoApp.study.studyType" for="field_studyType">Study Type</label>
+                    <select class="form-control" name="studyType" formControlName="studyType" id="field_studyType">
+                        <option value="KYC">{{'jhipsterdemoApp.StudyType.KYC' | translate}}</option>
+                        <option value="KYI">{{'jhipsterdemoApp.StudyType.KYI' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterdemoApp.study.country" for="field_country">Country</label>
+                    <select class="form-control" id="field_country" name="country" formControlName="country">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="countryOption.id === editForm.get('country').value?.id ? editForm.get('country').value : countryOption" *ngFor="let countryOption of countries; trackBy: trackCountryById">{{countryOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterdemoApp.study.organism" for="field_organism">Organism</label>
+                    <select class="form-control" id="field_organism" name="organism" formControlName="organism">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="organismOption.id === editForm.get('organism').value?.id ? editForm.get('organism').value : organismOption" *ngFor="let organismOption of organisms; trackBy: trackOrganismById">{{organismOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

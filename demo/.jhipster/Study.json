@@ -1,0 +1,50 @@
+{
+    "name": "Study",
+    "fields": [
+        {
+            "fieldName": "nid",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "studyType",
+            "fieldType": "StudyType",
+            "fieldValues": "KYC,KYI"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "country",
+            "otherEntityRelationshipName": "study",
+            "relationshipName": "country",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "organism",
+            "otherEntityRelationshipName": "study",
+            "relationshipName": "organism",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "studyVersion",
+            "otherEntityRelationshipName": "study",
+            "relationshipName": "versions"
+        }
+    ],
+    "changelogDate": "20190514104523",
+    "entityTableName": "study",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

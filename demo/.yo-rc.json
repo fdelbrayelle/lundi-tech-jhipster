@@ -1,0 +1,46 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "world.gfi.jhipsterdemo",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "monolith",
+    "baseName": "jhipsterdemo",
+    "packageName": "world.gfi.jhipsterdemo",
+    "packageFolder": "world/gfi/jhipsterdemo",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODczOTdmMWRiZTZlMzM0NzQwYTBmMGNlNzQwOGRjYWVkYmE0ZmNjZTlhODQ3ZGFiYzNjZGRlYjNiYjIxNTQzYWIzNjIxMGNlYzk4YWU3OTBlYzU1N2YxNzZjZTU2MTg1N2MzYzA5Y2Y2NzNhNGE3NzA2NDIzMjA3MTI4OGJiYjk=",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "fr",
+      "es"
+    ],
+    "herokuAppName": "powerful-meadow-92006",
+    "herokuDeployType": "git"
+  }
+}

@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="study">
+            <h2><span jhiTranslate="jhipsterdemoApp.study.detail.title">Study</span> {{study.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterdemoApp.study.nid">Nid</span></dt>
+                <dd>
+                    <span>{{study.nid}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterdemoApp.study.studyType">Study Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'jhipsterdemoApp.StudyType.' + study.studyType}}">{{study.studyType}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterdemoApp.study.country">Country</span></dt>
+                <dd>
+                    <div *ngIf="study.country">
+                        <a [routerLink]="['/country', study.country?.id, 'view']">{{study.country?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterdemoApp.study.organism">Organism</span></dt>
+                <dd>
+                    <div *ngIf="study.organism">
+                        <a [routerLink]="['/organism', study.organism?.id, 'view']">{{study.organism?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/study', study.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

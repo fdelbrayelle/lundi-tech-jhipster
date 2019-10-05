@@ -1,0 +1,21 @@
+{
+  "jhipsterdemoApp": {
+    "voiture": {
+      "home": {
+        "title": "Voitures",
+        "createLabel": "Crear nuevo Voiture",
+        "createOrEditLabel": "Crear o editar Voiture"
+      },
+      "created": "Un nuevo Voiture ha sido creado con el identificador {{ param }}",
+      "updated": "Un Voiture ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Voiture ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Voiture {{ id }}?"
+      },
+      "detail": {
+        "title": "Voiture"
+      },
+      "nom": "Nom"
+    }
+  }
+}
